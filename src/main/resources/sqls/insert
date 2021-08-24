@@ -1,0 +1,44 @@
+-- ORIGIN_DATASET
+INSERT INTO ORIGIN_DATASET
+(OD_NM, OD_DIR, CATEGORY_CD, CREATE_DATE)
+VALUES
+('방송0002', 'D:/Download', 10, NOW()),
+('방송0003', 'D:/Download', 10, NOW()),
+('방송0004', 'D:/Download', 10, NOW()),
+('취미0002', 'D:/hobby', 12, NOW()),
+('취미0003', 'D:/hobby', 12, NOW()),
+('취미0004', 'D:/hobby', 12, NOW());
+
+
+-- ORIGIN_FILE
+INSERT INTO ORIGIN_FILE
+(OF_DIR, OF_WAV_NM, OF_WAV_SIZE, OF_TXT_NM, OF_TXT_SIZE, OF_META_NM, CREATE_DATE, OD_ID)
+VALUES
+('D:/Download/방송0002', '날씨01.wav', 1024, '날씨01.txt', 1024, '날씨01.json', NOW(), 4),
+('D:/Download/방송0002', '날씨02.wav', 1024, '날씨02.txt', 1024, '날씨02.json', NOW(), 4),
+('D:/Download/방송0003', '중계01.wav', 1024, '중계01.txt', 1024, '중계01.json', NOW(), 5),
+('D:/Download/방송0003', '중계02.wav', 1024, '중계02.txt', 1024, '중계02.json', NOW(), 5),
+('D:/Download/방송0004', '뉴스01.wav', 1024, '뉴스01.txt', 1024, '뉴스01.json', NOW(), 6),
+('D:/Download/방송0004', '뉴스02.wav', 1024, '뉴스02.txt', 1024, '뉴스02.json', NOW(), 6),
+('D:/hobby/취미0002', '서핑01.wav', 2048, '서핑01.txt', 2048, '서핑01.json', NOW(), 7),
+('D:/hobby/취미0002', '서핑02.wav', 2048, '서핑02.txt', 2048, '서핑02.json', NOW(), 7),
+('D:/hobby/취미0003', '복싱01.wav', 2048, '복싱01.txt', 2048, '복싱01.json', NOW(), 8),
+('D:/hobby/취미0003', '복싱02.wav', 2048, '복싱02.txt', 2048, '복싱02.json', NOW(), 8),
+('D:/hobby/취미0004', '요리01.wav', 2048, '요리01.txt', 2048, '요리01.json', NOW(), 9),
+('D:/hobby/취미0004', '요리02.wav', 2048, '요리02.txt', 2048, '요리02.json', NOW(), 9);
+
+
+-- REVISION_DATASET
+INSERT INTO REVISION_DATASET
+(RD_NM, RD_DIR, CATEGORY_CD, CREATE_DATE, OD_ID)
+VALUES
+('방송0002_수정0001', 'D:/수정/', 10, NOW(), 4),
+('방송0002_수정0002', 'D:/수정/', 10, NOW(), 4),
+('방송0003_수정0001', 'D:/수정/', 10, NOW(), 5),
+('방송0003_수정0002', 'D:/수정/', 10, NOW(), 5),
+('방송0004_수정0001', 'D:/수정/', 10, NOW(), 6),
+('방송0004_수정0002', 'D:/수정/', 10, NOW(), 6),
+('방송0004_수정0003', 'D:/수정/', 10, NOW(), 6);
+
+
+-- REVISION_FILE
